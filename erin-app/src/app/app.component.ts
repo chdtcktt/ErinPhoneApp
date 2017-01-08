@@ -1,8 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
+import { AgmCoreModule } from 'angular2-google-maps/core';
 
-import { HomePage } from '../pages/home/home';
+import { MapPage } from '../pages/map/map';
 import { AboutPage } from '../pages/about/about';
 
 
@@ -12,7 +13,7 @@ import { AboutPage } from '../pages/about/about';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = MapPage;
 
 
   constructor(public platform: Platform) {
@@ -29,8 +30,8 @@ export class MyApp {
     });
   }
 
-  GoHome(){
-    this.nav.push(HomePage);
+  GoMap(){
+    this.nav.push(MapPage);
   }
 
   GoAbout(){

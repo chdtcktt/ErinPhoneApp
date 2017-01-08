@@ -8,10 +8,10 @@ import { NavController, NavParams } from 'ionic-angular';
   Ionic pages and navigation.
 */
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-map',
+  templateUrl: 'map.html'
 })
-export class HomePage {
+export class MapPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
