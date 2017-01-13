@@ -13,10 +13,19 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class MapPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  map: any = {};
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) { }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
+
+    this.map = {
+      lat: 47.6201451,
+      lng: -122.3298646,
+      zoom: 12,
+      markerLabel: 'PLACE'
+    };
   }
 
 }

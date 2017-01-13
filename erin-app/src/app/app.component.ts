@@ -1,7 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-import { AgmCoreModule } from 'angular2-google-maps/core';
 
 import { MapPage } from '../pages/map/map';
 import { AboutPage } from '../pages/about/about';
