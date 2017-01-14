@@ -1,29 +1,22 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {  MapPage, ListPage, AboutPage } from '../pages';
-
 
 /*
-  Generated class for the Home page.
+  Generated class for the List page.
 
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 */
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-list',
+  templateUrl: 'list.html'
 })
-
-
-export class HomePage {
-  mapTab = MapPage;
-  listTab = ListPage;
-  aboutTab = AboutPage;
-  
+export class ListPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
+    console.log('ionViewDidLoad ListPage');
   }
+
 }
