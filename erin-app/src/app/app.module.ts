@@ -2,14 +2,14 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { MyApp } from './app.component';
-import { MapPage } from '../pages/map/map';
-import { AboutPage } from '../pages/about/about';
+import { HomePage, MapPage, AboutPage } from '../pages/pages';
 
 
 
 @NgModule({
   declarations: [
     MyApp,
+    HomePage,
     MapPage,
     AboutPage
   ],
@@ -20,6 +20,7 @@ import { AboutPage } from '../pages/about/about';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    HomePage,
     MapPage,
     AboutPage
   ],

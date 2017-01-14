@@ -2,8 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { MapPage } from '../pages/map/map';
-import { AboutPage } from '../pages/about/about';
+import { HomePage, MapPage, AboutPage } from '../pages/pages';
+
 
 
 @Component({
@@ -12,7 +12,7 @@ import { AboutPage } from '../pages/about/about';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = MapPage;
+  rootPage: any = HomePage;
 
 
   constructor(public platform: Platform) {
@@ -27,13 +27,5 @@ export class MyApp {
       StatusBar.styleDefault();
       Splashscreen.hide();
     });
-  }
-
-  GoMap(){
-    this.nav.push(MapPage);
-  }
-
-  GoAbout(){
-    this.nav.push(AboutPage);
   }
 }
