@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {  MapPage, ListPage, AboutPage } from '../pages';
+import {  MapPage, ListPage } from '../pages';
 
 
 /*

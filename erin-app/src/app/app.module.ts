@@ -1,8 +1,11 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { AgmCoreModule } from 'angular2-google-maps/core';
+
 import { MyApp } from './app.component';
 import { HomePage, MapPage, ListPage, AboutPage } from '../pages/pages';
+import { GobleApi } from './shared/shared';
+
 
 
 
@@ -12,7 +15,7 @@ import { HomePage, MapPage, ListPage, AboutPage } from '../pages/pages';
     HomePage,
     MapPage,
     ListPage,
-    AboutPage
+    AboutPage 
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -25,7 +28,7 @@ import { HomePage, MapPage, ListPage, AboutPage } from '../pages/pages';
     MapPage,
     ListPage,
     AboutPage
-  ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+    ],
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},GobleApi]
 })
 export class AppModule {}

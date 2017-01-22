@@ -3,6 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage, AboutPage } from '../pages/pages';
+import {GobleApi} from './shared/shared';
 
 
 
@@ -15,7 +16,7 @@ export class MyApp {
   rootPage: any = HomePage;
 
 
-  constructor(public platform: Platform) {
+  constructor(public platform: Platform, public gobleApi: GobleApi) {
     this.initializeApp();
 
   }
