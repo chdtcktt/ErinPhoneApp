@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { HomePage } from '../pages/pages';
+import { HomePage, AboutPage } from '../pages/pages';
 
 
 
@@ -27,5 +27,11 @@ export class MyApp {
       StatusBar.styleDefault();
       Splashscreen.hide();
     });
+  }
+
+  GoAbout() {
+    console.log('about clicked');
+    this.nav.push(AboutPage);
+
   }
 }

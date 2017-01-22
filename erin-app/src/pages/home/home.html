@@ -1,10 +1,14 @@
 <ion-header>
+    <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Goble</ion-title>
+  </ion-navbar>
 </ion-header>
 
 
 <ion-tabs id="temp-tab">
   <ion-tab tabTitle="Map" [root]="mapTab" tabIcon="map"></ion-tab>
-  <ion-tab tabTitle="List" [root]="listTab" tabIcon="list"></ion-tab>  
-  <ion-tab tabTitle="About" [root]="aboutTab" tabIcon="information-circle"></ion-tab>
-  
+  <ion-tab tabTitle="List" [root]="listTab" tabIcon="list"></ion-tab>    
 </ion-tabs>

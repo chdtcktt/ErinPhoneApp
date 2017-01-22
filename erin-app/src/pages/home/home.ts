@@ -18,7 +18,6 @@ import {  MapPage, ListPage, AboutPage } from '../pages';
 export class HomePage {
   mapTab = MapPage;
   listTab = ListPage;
-  aboutTab = AboutPage;
   
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
