@@ -4,14 +4,11 @@ import { Http, Response } from '@angular/http';
 
 @Injectable()
 export class GobleApi {
-    private baseUrl = '';
+    private baseUrl = 'https://goble-cff16.firebaseio.com/';
 
     constructor(private http: Http) {
 
     }
-
-
-
 
     getLocations() {
         return [ {
