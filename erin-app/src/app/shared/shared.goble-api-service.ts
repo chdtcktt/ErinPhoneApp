@@ -1,22 +1,35 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, Headers } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs';
+
+import { Location } from './models/location';
+
+
 
 
 @Injectable()
 export class GobleApi {
-    private baseUrl = 'https://goble-cff16.firebaseio.com/';
+    private baseUrl = 'https://goble-cff16.firebaseio.com';
+
+
 
     constructor(private http: Http) {
 
     }
 
-    getLocations() {
-        return [ {
-            id: 1,
-            name: "Store1",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    getLocations(): Observable<Location[]> {
+        return this.http
+            .get(`${this.baseUrl}/locations.json`, { headers: this.getHeaders() })
+            .map(response => {
+                return response.json() as Location[];
+            });
+    }
 
-        }];
+    private getHeaders() {
+        let headers = new Headers();
+        headers.append('Accept', 'application/json');
+        return headers;
     }
 
 }
