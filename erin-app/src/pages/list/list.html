@@ -7,11 +7,8 @@
 
 <ion-content padding>
    <ion-list>
-     <button ion-item *ngFor="let item of locations">
-       {{item.name}}
+     <button ion-item *ngFor="let location of locations" (click)="storeTapped($event, location)">
+       {{location.name}}
      </button>
-
-
-     
    </ion-list>
 </ion-content>

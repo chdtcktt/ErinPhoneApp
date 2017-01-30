@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-
+import { LocationPage } from '../pages';
 import { GobleApi } from '../../app/shared/shared';
 import { Location } from '../../app/shared/models/location'
+
 
 @Component({
   selector: 'page-list',
@@ -23,8 +24,10 @@ export class ListPage {
       result => {
         this.locations = result;
       });
+  }
 
-
+  storeTapped($event, location) {
+    this.navCtrl.push(LocationPage, location);
   }
 }
 
