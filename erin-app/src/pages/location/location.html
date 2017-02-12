@@ -1,12 +1,10 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>location</ion-title>
+    <ion-title>{{navParams.data.name}}</ion-title>
   </ion-navbar>
-
 </ion-header>
-
-
 <ion-content padding>
-
+  <img id="main-image" src="{{navParams.data.image}}"
+    alt="" />
+    {{navParams.data.description}}
 </ion-content>
