@@ -14,6 +14,7 @@ export class ListPage {
 
   locations: Location[];
   unFilteredLocations: Location[];
+  filterSelected: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private gobleApi: GobleApi) { }
 
@@ -53,6 +54,14 @@ export class ListPage {
 
   storeTapped($event, location) {
     this.navCtrl.push(LocationPage, location);
+  }
+
+  filterClick($event, filter) {
+    console.log($event);
+    console.log(filter);
+     
+     this.filterSelected = true;
+
   }
 }
 

@@ -1,17 +1,24 @@
 <ion-header>
-    <ion-navbar color="primary">
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-searchbar id="search" placeholder="search" (ionInput)="getItems($event)"></ion-searchbar>
   </ion-navbar>
+  <div style="text-align: center;">
+    <button ion-button small round outline [outline]="this.filterSelected" (click)="filterClick($event,'recycle')">recycle</button>
+    <button ion-button small round outline>green</button>
+    <button ion-button small round outline>grass roots</button>
+    <button ion-button small round  outline>charity</button>  
+    <button ion-button small round  outline>charity</button>    
+    <button ion-button small round  outline>charity</button>         
+  </div>
 </ion-header>
-
-
 <ion-content padding>
-   <ion-list>
-     <button ion-item *ngFor="let location of locations" (click)="storeTapped($event, location)">
-       {{location.name}}
+  <ion-list>
+    <button ion-item *ngFor="let location of locations" (click)="storeTapped($event, location)">
+       {{this.location.name}}
      </button>
-   </ion-list>
+  </ion-list>
 </ion-content>
+
