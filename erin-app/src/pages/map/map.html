@@ -1,4 +1,11 @@
-<ion-header></ion-header>
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-searchbar id="search" placeholder="search" (ionInput)="getItems($event)"></ion-searchbar>
+  </ion-navbar>
+</ion-header>
 <ion-content class="map-page">
 
   <sebm-google-map id="map" [latitude]="map.lat" [longitude]="map.lng" [zoom]="map.zoom" [zoomControl]="map.zoomControl" [streetViewControl]="map.streetViewControl">

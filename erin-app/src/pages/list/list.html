@@ -1,6 +1,9 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>List View</ion-title>
+    <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-searchbar id="search" placeholder="search" (ionInput)="getItems($event)"></ion-searchbar>
   </ion-navbar>
 </ion-header>
 

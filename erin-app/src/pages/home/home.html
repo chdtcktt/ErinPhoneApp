@@ -1,13 +1,9 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-      <ion-searchbar id="search" placeholder="search" (ionInput)="getItems($event)"></ion-searchbar>
-  </ion-navbar>
 </ion-header>
 
-<ion-tabs id="temp-tab">
-  <ion-tab tabTitle="Map" [root]="mapTab" tabIcon="map"></ion-tab>
-  <ion-tab tabTitle="List" [root]="listTab" tabIcon="list"></ion-tab>
-</ion-tabs>
+<ion-content>
+  <ion-tabs id="temp-tab">
+    <ion-tab tabTitle="Map" [root]="mapTab" tabIcon="map"></ion-tab>
+    <ion-tab tabTitle="List" [root]="listTab" tabIcon="list"></ion-tab>
+  </ion-tabs>
+</ion-content>
