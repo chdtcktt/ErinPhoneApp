@@ -5,16 +5,15 @@
     </button>
     <ion-searchbar id="search" placeholder="search" (ionInput)="getItems($event)"></ion-searchbar>
   </ion-navbar>
-  <div style="text-align: center;">
-    <button ion-button small round outline [outline]="this.filterSelected" (click)="filterClick($event,'recycle')">recycle</button>
-    <button ion-button small round outline>green</button>
-    <button ion-button small round outline>grass roots</button>
-    <button ion-button small round  outline>charity</button>  
-    <button ion-button small round  outline>charity</button>    
-    <button ion-button small round  outline>charity</button>         
-  </div>
 </ion-header>
 <ion-content padding>
+ <div style="text-align: center;">
+    <button ion-button small round outline 
+    [outline]="!this.filter.selected" 
+    (click)="filterTapped($event,this.filter)" 
+    *ngFor="let filter of searchFilters">{{this.filter.name}}</button>       
+  </div>
+
   <ion-list>
     <button ion-item *ngFor="let location of locations" (click)="storeTapped($event, location)">
        {{this.location.name}}

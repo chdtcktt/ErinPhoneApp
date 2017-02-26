@@ -3,7 +3,8 @@ import { Http, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs';
 
-import { Location } from './models/location';
+import { Location, FilterKeyword  } from './models/location';
+import { SearchFilter} from '../../app/shared/models/searchFilter'
 
 
 
@@ -24,6 +25,35 @@ export class GobleApi {
             .map(response => {
                 return response.json() as Location[];
             });
+    }
+
+    getSearchFilters(): SearchFilter[] {
+        let response: SearchFilter[] = new Array;
+        response.push(
+            {
+                id: 1,
+                name: 'Recycle',
+                selected: false
+            },
+            {
+                id: 2,
+                name: 'Donate',
+                selected: false
+            },
+            {
+                id: 3,
+                name: 'Cause 3',
+                selected: false
+            },
+            {
+                id: 4,
+                name: 'Cause 4',
+                selected: false
+            }
+
+        );
+
+        return response;
     }
 
     private getHeaders() {
